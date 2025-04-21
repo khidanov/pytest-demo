@@ -1,6 +1,8 @@
-import pytest
-from src.formatter1 import generate_np_array
 import numpy as np
+import pytest
+
+from src.formatter1 import generate_np_array
+
 
 @pytest.mark.parametrize(
     "size, expected_shape",
@@ -12,7 +14,6 @@ import numpy as np
         (10000, (10000,)),
     ],
 )
-
 @pytest.mark.timeout(5)  # Set a 5-second timeout
 def test_generate_np_array(size, expected_shape):
     result = generate_np_array(size)

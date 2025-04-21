@@ -1,4 +1,5 @@
 import pytest
+
 from src.formatter1 import format_file_size
 
 
@@ -13,7 +14,6 @@ from src.formatter1 import format_file_size
         (1024**4, "1.00 TB"),
     ],
 )
-
 @pytest.mark.timeout(5)  # Set a 5-second timeout
 def test_format_file_size(size_bytes, expected_result):
     assert format_file_size(size_bytes) == expected_result
