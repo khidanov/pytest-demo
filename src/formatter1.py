@@ -18,4 +18,4 @@ def format_file_size(size_bytes):
 def generate_np_array(size):
     if size <= 0:
         raise ValueError("Size must be a positive integer")
-    return np.random.rand(size)
+    return np.random.rand(size+2)
